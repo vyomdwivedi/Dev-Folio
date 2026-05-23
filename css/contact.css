@@ -1,0 +1,132 @@
+body {
+  background: rgba(10, 13, 11, 1);
+  color: #d7d7d7;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.contact-section {
+  min-height: 100vh;
+  padding: 120px 10%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInPage 1s ease-in;
+}
+
+.contact-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.3rem;
+  color: #00eaff;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  animation: fadeDown 1s ease-out;
+}
+
+form {
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeUp 1.2s ease-out;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 234, 255, 0.2);
+  border-radius: 10px;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: rgba(0, 234, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 234, 255, 0.3);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid rgba(0, 234, 255, 0.4);
+  color: #00eaff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  background: #00eaff;
+  color: #0a0a0f;
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+#formMessage {
+  margin-top: 25px;
+  font-size: 0.95rem;
+  color: #00eaff;
+  min-height: 22px;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 800px) {
+  .contact-section {
+    padding: 100px 7%;
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+  }
+
+  form {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 10px 18px;
+  }
+}
